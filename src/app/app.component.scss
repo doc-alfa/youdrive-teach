@@ -1,0 +1,46 @@
+.header-container {
+  display: flex;
+  align-items: center;
+  width: auto;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  width: calc(16rem - 1.25rem);
+}
+
+.logo {
+  border-left: 1px solid #151a30;
+  padding-left:1rem;
+}
+
+.logo img {
+  height: 40px;
+}
+
+nb-layout-column {
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#toogle-button {
+  margin-left:-0.5rem;
+  margin-right:0.5rem;
+}
+
+nb-layout-header nav {
+  height: auto !important;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.header-item-container {
+  display: flex;
+  align-items: center;
+  width: auto;
+}

@@ -1,0 +1,45 @@
+<nb-layout>
+  <nb-layout-header fixed>
+    <div class="header-container">
+      <div class="header-item-container">
+        <button id="toogle-button" nbButton ghost class="button-responsive" (click)="toogleSidebar()">
+          <nb-icon icon="menu-outline"></nb-icon>
+        </button>
+        <div class="header-container">
+          <div class="logo-container">
+            <a class="logo">
+              <img src="/assets/logos/youdrive.png">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="header-item-container">
+        <nb-actions size="small">
+          <nb-action nbTooltip="Suchen" nbTooltipStatus="primary">
+            <nb-search type="rotate-layout"></nb-search>
+          </nb-action>
+          <nb-action icon="email-outline" badgeDot badgePosition="bottom right" badgeStatus="success"
+            nbTooltip="Beenden" nbTooltipStatus="primary"></nb-action>
+          <nb-action icon="bell-outline" badgeDot badgePosition="bottom right" badgeStatus="success"></nb-action>
+          <nb-action>
+            <nb-user name="Manfred Huber" title="Willkommen"></nb-user>
+          </nb-action>
+        </nb-actions>
+      </div>
+    </div>
+  </nb-layout-header>
+
+  <nb-layout-header subheader>
+    <router-outlet name="subheader"></router-outlet>
+  </nb-layout-header>
+
+  <nb-sidebar>
+    <nb-menu [items]="items" tag="sidebar" autoCollapse="true">
+    </nb-menu>
+  </nb-sidebar>
+
+  <nb-layout-column class="colored-column-basic" [ngStyle]="{backgroundImage:'url(./assets/backgrounds/audi.jpeg)'}">
+    <router-outlet></router-outlet>
+  </nb-layout-column>
+
+</nb-layout>
